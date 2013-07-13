@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<interface xmlns="http://zero-install.sourceforge.net/2004/injector/interface">
+  <name>0install-windows-support</name>
+  <summary>support for 0install on Windows</summary>
+
+  <homepage>http://0install.net/</homepage>
+
+  <feed-for interface="http://0install.net/2013/interfaces/0install-windows-support.xml"/>
+
+  <group license="OSI Approved :: GNU Lesser General Public License (LGPL)" arch='*-src'>
+    <restricts interface="http://repo.roscidus.com/ocaml/ocaml-runtime">
+      <version not-before='4.0' before='4.1'/>
+    </restricts>
+
+    <command name='compile'>
+      <runner interface='http://repo.roscidus.com/devel/make'>
+	<arg>-f</arg>
+	<arg>${SRCDIR}/Makefile</arg>
+      </runner>
+    </command>
+
+    <implementation id="." version="2.3.1-post"/>
+  </group>
+</interface>
