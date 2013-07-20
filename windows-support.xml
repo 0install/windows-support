@@ -20,6 +20,6 @@
       </runner>
     </command>
 
-    <implementation id="." released="2013-07-20" version="2.4"/>
+    <implementation id="." version="2.4-post"/>
   </group>
 </interface>
